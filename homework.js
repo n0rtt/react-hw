@@ -10,6 +10,8 @@ for (var i = 0; i < employersNames.length; i++) {
 	employersNames[i] = employersNames[i].toLowerCase().trim();
 }
 
+console.log(employersNames)
+
 var sponsors = {
     cash: [40000, 5000, 30400, 12000],
     eu: ['SRL', 'PLO', 'J&K'],
@@ -32,7 +34,7 @@ function makeBusiness(owner, director, cash, emp) {
     director = director || 'Victor';
     var sumSponsors = sponsors.eu.concat(sponsors.rus, 'unexpected sponsor');
     console.log('We have a business. Owner: ' + owner + ', director: ' + director + '. Our budget: ' + cash + '. And our employers: ' +
-    emp);
+        emp);
     console.log('And we have a sponsors: ');
     console.log.apply(null, sumSponsors);
     console.log('Note. Be careful with ' + sponsors.eu[0] + ". It's a huge risk.");
